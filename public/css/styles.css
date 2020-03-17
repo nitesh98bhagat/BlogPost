@@ -5,18 +5,26 @@
     
 }
 
-/*NavBar*/
-.navBar{
-    width: auto;
-    height: 60px;
-    padding: 15px;
-    background-color: rgb(255, 179, 0);
-}
+
 
 footer{
     text-align :center;
     width: inherit;
-    color: lightgray;
-    height: 200px;
+    color: rgb(70, 66, 66);
+    height: fit-content;
+    padding: 50px;
     background-color: whitesmoke;
+}
+
+.mainBody{
+    padding: 5px;
+    height: 400px;
+}
+
+.postItem{
+    margin: 10px;
+    border: 1px solid lightgray ;
+    padding: 10px;
+    width: fit-content;
+    border-radius: 15px;
 }

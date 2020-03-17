@@ -1,3 +1,14 @@
 <%-include('header')-%>
-<h1>hello <%=name%></h1>
+
+
+<div class="mainBody">
+    <% for(var i=0; i<homeData.length;i++){ %>
+    <div class="postItem">
+        <p> <%=homeData[i]%></p>
+    </div>
+    <% } %>
+</div>
+
+
+
 <%-include('footer')-%>
