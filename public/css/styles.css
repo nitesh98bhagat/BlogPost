@@ -1,0 +1,22 @@
+*{
+    font-family: cursive;
+    font-size: 25.0;
+    margin: 0;
+    
+}
+
+/*NavBar*/
+.navBar{
+    width: auto;
+    height: 60px;
+    padding: 15px;
+    background-color: rgb(255, 179, 0);
+}
+
+footer{
+    text-align :center;
+    width: inherit;
+    color: lightgray;
+    height: 200px;
+    background-color: whitesmoke;
+}
