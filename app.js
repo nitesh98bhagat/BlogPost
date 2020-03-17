@@ -3,7 +3,15 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 
-const tweets = ["Hello World, thats my first blog post in my own god damm APP", "oh no!!", "hello"];
+const tweets = [];
+
+const contact = {
+    email: "nitshbhgt1998@gmail.com",
+    phoneNo: "9007374954",
+    facebook: "facebook/niteshBhagat",
+    twitter: "twitter/myself_nitesh",
+
+}
 
 
 //instance of express server
@@ -32,18 +40,35 @@ app.get("/", function (req, res) {
 });
 
 
-//ADD POST ROUTE
+//post method
+app.post("/", function (req, res) {
+    let headline = req.body.headline;
+    let content = req.body.content;
+
+    tweetObj = {
+        head: headline,
+        body: content
+    };
+
+    tweets.push(tweetObj);
+    res.redirect("/");
+
+});
+
+//ADDPOST ROUTE
 app.get("/addPosts", function (req, res) {
+
     res.render("addPosts");
 });
 
 //ABOUT US
-app.get("/aboutUs", function(req, res){
+app.get("/aboutUs", function (req, res) {
     res.render("aboutUs");
 });
 
 
 //ABOUT US
-app.get("/contactUs", function(req, res){
-    res.render("contactUs");
+app.get("/contactUs", function (req, res) {
+
+    res.render("contactUs", { contactObj: contact });
 });

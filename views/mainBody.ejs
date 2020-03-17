@@ -1,14 +1,15 @@
-<%-include('header')-%>
+<%-include('partials/header')-%>
 
 
 <div class="mainBody">
     <% for(var i=0; i<homeData.length;i++){ %>
     <div class="postItem">
-        <p> <%=homeData[i]%></p>
+        <h3><%= homeData[i].head %></h3>
+        <p> <%= homeData[i].body %></p>
     </div>
     <% } %>
 </div>
 
 
 
-<%-include('footer')-%>
+<%-include('partials/footer')-%>
